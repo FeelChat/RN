@@ -1,0 +1,3 @@
+rootProject.name = 'FeelChatRN'
+
+include ':app'
