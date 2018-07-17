@@ -4,10 +4,18 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 type Props = {};
 
 export default class ContactsScreen extends Component<Props> {
+  static navigationOptions = {
+    title: '通讯录',
+    tabBarIcon: ({ focused, tintColor }) => {
+      let iconName = `ios-people${focused ? '' : '-outline'}`;
+      return <Icon name={iconName} size={25} color={tintColor} />;
+    },
+  };
   render() {
     return (
       <View style={styles.main}>

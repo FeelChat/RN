@@ -11,8 +11,13 @@ const RootStack = createMaterialBottomTabNavigator({
   '信息': { screen: Messages },
   '联系人': { screen: Contacts },
   '我': { screen: My },
+}, {
+  shifting: true,
+  initialRouteName: '信息',
+  activeTintColor: '#f0edf6',
+  inactiveTintColor: '#3e2465',
+  barStyle: { backgroundColor: '#694fad' },
 })
-
 
 type Props = {};
 
